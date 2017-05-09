@@ -22163,6 +22163,10 @@ var _reactDom = __webpack_require__(99);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
+var _search_bar = __webpack_require__(354);
+
+var _search_bar2 = _interopRequireDefault(_search_bar);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
@@ -22170,18 +22174,55 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //import injectTapEventPlugin from 'react-tap-event-plugin';
 
 var App = function App() {
+    return _react2.default.createElement(_search_bar2.default, null);
+};
+
+_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('container'));
+
+/***/ }),
+/* 354 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(15);
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var onInputClick = function onInputClick(e) {};
+
+exports.default = function (props) {
     return _react2.default.createElement(
         'div',
         { className: 'row text-center' },
         _react2.default.createElement(
             'div',
-            { className: 'col-sm-8 col-sm-offset-2' },
-            _react2.default.createElement('input', { className: 'form-control' })
+            { className: 'input-group col-sm-8 col-sm-offset-2', style: { padding: '20px' } },
+            _react2.default.createElement(
+                'div',
+                { className: 'input-group-addon' },
+                _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' })
+            ),
+            _react2.default.createElement('input', { className: 'form-control', onClick: onInputClick }),
+            _react2.default.createElement(
+                'span',
+                { className: 'input-group-btn' },
+                _react2.default.createElement(
+                    'button',
+                    { className: 'btn btn-primary' },
+                    'Search'
+                )
+            )
         )
     );
 };
-
-_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('container'));
 
 /***/ })
 /******/ ]);
